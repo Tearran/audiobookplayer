@@ -1,6 +1,6 @@
 # Introduction
  
-This project uses a Pimoroni Pirate Audio HAT on a Raspberry Pi Zero to play audiobooks. It is written with Python and Tkinter. I run it in Openbox at startup. [Fbcp-ili9341](https://github.com/juj/fbcp-ili9341) shows HDMI output on the display. 
+This project uses a Pimoroni Pirate Audio HAT on a Raspberry Pi Zero to play audiobooks. It is written in Python using Tkinter. I run it in Openbox at startup. [Fbcp-ili9341](https://github.com/juj/fbcp-ili9341) shows HDMI output on the display. 
 
 ![player](/photos/player.png "player")
 
@@ -11,7 +11,7 @@ Components I used:
 - Pirate Audio Hat ( tested with Amp and Speaker)
 
 ### Python App Overview
-The Tkinter App is quite simple. You can navigate in it with the four buttons of the Pirate Audio HAT. It needs python-vlc installed. For test purposes I configured the keys 'U'->A, 'J'->B, 'I'->X and 'K'->Y to use on a keyboard instead.
+The Tkinter App is quite simple. You can navigate with the four buttons of the Pirate Audio HAT. It needs python-vlc installed. For test purposes I configured the keys 'U'->A, 'J'->B, 'I'->X and 'K'->Y to use on a keyboard instead.
 
 #### Play View
 ![playview](/photos/playview.png "playview")
@@ -67,7 +67,7 @@ To autostart fbcp-ili9341 add `sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341 &` 
 
 - Configure Openbox to start program at boot:
 ```  
-cd
+cd ~
 cd .config
 mkdir openbox
 cd openbox
