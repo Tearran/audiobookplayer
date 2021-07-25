@@ -89,13 +89,13 @@ in my case that is:
 
 ### Configure Openbox
 In '~/.config/openbox/rc.xml' I added:
-'''
-<myxml>
+
+'''xml
 <applications>
     <application class="*">
         <decor>no</decor>
     </application>
 </applications>
-</myxml>
-'''
+.'''
+
 This removes all decorations, especially the top menu.
