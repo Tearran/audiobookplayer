@@ -1,6 +1,10 @@
 # Introduction
  
-This project uses a Pimoroni Pirate Audio HAT on a Raspberry Pi Zero to play audiobooks. It is written in Python using Tkinter. I run it in Openbox at startup. [Fbcp-ili9341](https://github.com/juj/fbcp-ili9341) shows HDMI output on the display. 
+This project uses a Pimoroni Pirate Audio HAT on a Raspberry Pi Zero to play audiobooks. It is written in Python with Tkinter. I run it in Openbox at startup. [Fbcp-ili9341](https://github.com/juj/fbcp-ili9341) shows HDMI output on the display. 
+
+## Info
+
+The app is a work in progress and customized for our personal needs. When I started out with this project, I couldn't find any example code that incorporated all the parts I wanted to use into one project. Maybe this helps someone with their project.
 
 ![player](/photos/player.png "player")
 
