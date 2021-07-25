@@ -24,8 +24,8 @@ The Tkinter App is quite simple. You can navigate in it with the four buttons of
 
 #### Settings View
 ![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview1")
-![settingsview2](/photos/settingsview_turnsleepon_turnwifioff.png "settingsview2")
-![settingsview3](/photos/settingsview_turnsleepon_turnwifion.png "settingsview3")
+
+![settingsview2](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
 
 
 ### Installing FBCP-ILI9341 for Pirate Audio HAT
