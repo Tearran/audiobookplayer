@@ -23,8 +23,14 @@ class NaviView(view.View):
                             {'r': 0, 'c': 1, 'icon': 'files.png'},     # but X
                             {'r': 1, 'c': 1, 'icon': 'forward.png'}]   # but Y
 
+        self.d = {"<u>": self.A,
+                  "<j>": self.B,
+                  "<i>": self.X,
+                  "<k>": self.Y}
+
     def view(self):
         '''look of the view'''
+        self.set_keys(self.app.root, self.d)
         self.app.set_view(self)
         self.countdown()
 

@@ -28,8 +28,14 @@ class PlayView(view.View):
                             {'r': 0, 'c': 1, 'icon': 'navi.png'},  # but X
                             {'r': 1, 'c': 1, 'icon': 'playpause.png'}]  # but Y
 
+        self.d = {"<u>": self.A,
+                  "<j>": self.B,
+                  "<i>": self.X,
+                  "<k>": self.Y}
+
     def view(self):
         '''look of the view'''
+        self.set_keys(self.app.root, self.d)
         self.app.set_view(self)
 
         self.v = ttk.Frame(self.app.root, width=240, height=240)

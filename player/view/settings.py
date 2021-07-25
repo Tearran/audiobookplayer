@@ -29,8 +29,14 @@ class SettingsView(view.View):
         self.button_data = [{'r': 1, 'c': 0, 'icon': 'play_settings.png'},
                             {'r': 1, 'c': 1, 'icon': 'shutdown.png'}]
 
+        self.d = {"<u>": self.A,
+                  "<j>": self.B,
+                  "<i>": self.X,
+                  "<k>": self.Y}
+
     def view(self):
         '''look of the view'''
+        self.set_keys(self.app.root, self.d)
         self.app.set_view(self)
 
         self.sleep_on = self.app.sleep.get_sleep_on()

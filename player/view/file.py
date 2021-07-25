@@ -29,8 +29,14 @@ class FileView(view.View):
                             {'r': 0, 'c': 2, 'icon': 'settings.png'},  # but X
                             {'r': 1, 'c': 2, 'icon': 'ok.png'}]        # but Y
 
+        self.d = {"<u>": self.A,
+                  "<j>": self.B,
+                  "<i>": self.X,
+                  "<k>": self.Y}
+
     def view(self):
         '''look of the view'''
+        self.set_keys(self.app.root, self.d)
         self.app.set_view(self)
         self.countdown()
 
