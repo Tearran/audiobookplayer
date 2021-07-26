@@ -8,7 +8,7 @@ This project uses a Pimoroni Pirate Audio HAT on a Raspberry Pi Zero to play aud
 
 The app is a work in progress and customized for our personal needs. When I started out with this project, I couldn't find any example code that incorporated all the parts I wanted to use into one project. Maybe this helps someone with their project.
 
-Components I used:
+## Components I used:
 
 - Raspberry Pi zero
 - SD-Card with Raspberry Pi OS with desktop, configured (especially I2C enabled, SPI disabled) and updated
@@ -17,20 +17,44 @@ Components I used:
 ### Python App Overview
 The Tkinter App is quite simple. You can navigate with the four buttons of the Pirate Audio HAT. It needs python-vlc installed. For test purposes I configured the keys 'U'->A, 'J'->B, 'I'->X and 'K'->Y to use on a keyboard instead.
 
+### Want to test it?
+You will need:
+- everything in the player folder.
+- python-vlc installed (`pip install python-vlc`)
+- run `python3 player/main.py`
+- GPIO Pin for the Y button changed at some point from 20 to 24
+you can change it in `player/constants.py`
+
 #### Play View
 ![playview](/photos/playview.png "playview")
+
+change volume _[A,B]_, play/pause _[Y]_ and go to navi view _[X]_
 
 #### Navi View
 ![naviview](/photos/naviview.png "naviview")
 
+restart audio book _[A]_, chapter forward/backward _[B,Y]_ and go to file view _[X]_
+
 #### File View
 ![fileview](/photos/fileview.png "fileview")
+
+- left buttons navigate the directory structure _[A,B]_
+- ok _[Y]_ opens directory or if it is an mp3 or m4a open the file for playback
+- go to settings view _[X]_
 
 #### Settings View
 ![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview1")
 
 ![settingsview2](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
 
+- turn sleep timer on/off _[A]_
+if on, the player saves the current audiobook and position and shuts down the pi
+default is 30min, change it in 'player/constants.py'
+- go to play view _[B]_
+- turn wifi on/off _[X]_
+uses rfkill
+- shutdown _[Y]_
+save audiobook and position and shut down the pi
 
 ### Installing FBCP-ILI9341 for Pirate Audio HAT
 Follow the installation instructions for [fbcp-ili9341](https://github.com/juj/fbcp-ili9341/blob/master/README.md#installation)

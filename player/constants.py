@@ -15,5 +15,5 @@ ICONS = "/home/pi/player/icons/"
 SLEEP_TIME = 1800
 
 # where are the audiobooks
-DEFAULT_AUDIO_PATH = "/home/pi/audiobooks/"
-LASTBOOK_PATH = "/home/pi/audiobooks/lastbook.txt"
+DEFAULT_AUDIO_PATH = "/home/pi/"
+LASTBOOK_PATH = "/home/pi/"
