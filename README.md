@@ -123,7 +123,7 @@ in my case that is:
 - I use raspi-config to start GUI at boot with autologin.
 
 
-## Configure Openbox
+### Configure Openbox
 In '~/.config/openbox/rc.xml' I added:
 
 ```xml
