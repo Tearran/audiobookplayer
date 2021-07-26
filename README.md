@@ -4,17 +4,17 @@ This project uses a Pimoroni Pirate Audio HAT on a Raspberry Pi Zero to play aud
 
 ![player](/photos/player.png "player")
 
-## Info
+### Info
 
 The app is a work in progress and customized for our personal needs. When I started out with this project, I couldn't find any example code that incorporated all the parts I wanted to use into one project. Maybe this helps someone with their project.
 
-## Components I used:
+### Components I used:
 
 - Raspberry Pi zero
 - SD-Card with Raspberry Pi OS with desktop, configured (especially I2C enabled, SPI disabled) and updated
 - Pirate Audio Hat ( tested with Amp and Speaker)
 
-### Python App Overview
+## Python App Overview
 The Tkinter App is quite simple. You can navigate with the four buttons of the Pirate Audio HAT. It needs python-vlc installed. For test purposes I configured the keys 'U'->A, 'J'->B, 'I'->X and 'K'->Y to use on a keyboard instead.
 
 ### Want to test it?
@@ -56,7 +56,7 @@ uses rfkill
 - shutdown _[Y]_
 save audiobook and position and shut down the pi
 
-### Installing FBCP-ILI9341 for Pirate Audio HAT
+## Installing FBCP-ILI9341 for Pirate Audio HAT
 Follow the installation instructions for [fbcp-ili9341](https://github.com/juj/fbcp-ili9341/blob/master/README.md#installation)
 
 I used the following cmake configuration:
@@ -91,7 +91,7 @@ as is described [here](https://github.com/pimoroni/pirate-audio)
 
 To autostart fbcp-ili9341 add `sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341 &` to your `/etc/rc.local` file
 
-### How to autostart an app with Openbox
+## How to autostart an app with Openbox
 
 - Configure Openbox to start program at boot:
 ```  
@@ -115,7 +115,7 @@ in my case that is:
 
 - I use raspi-config to start GUI at boot with autologin.
 
-### Configure Openbox
+## Configure Openbox
 In '~/.config/openbox/rc.xml' I added:
 
 ```xml
