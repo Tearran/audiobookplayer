@@ -28,33 +28,39 @@ you can change it in `player/constants.py`
 #### Play View
 ![playview](/photos/playview.png "playview")
 
-change volume _[A,B]_, play/pause _[Y]_ and go to navi view _[X]_
+- change volume **[A,B]**
+- play/pause **[Y]**
+- go to navi view **[X]**
 
 #### Navi View
 ![naviview](/photos/naviview.png "naviview")
 
-restart audio book _[A]_, chapter forward/backward _[B,Y]_ and go to file view _[X]_
+- restart audio book **[A]**
+- chapter forward/backward **[B,Y]**
+- go to file view **[X]**
 
 #### File View
 ![fileview](/photos/fileview.png "fileview")
 
-- left buttons navigate the directory structure _[A,B]_
-- ok _[Y]_ opens directory or if it is an mp3 or m4a open the file for playback
-- go to settings view _[X]_
+- left buttons navigate the directory structure **[A,B]**
+- go to settings view **[X]**
+- ok **[Y]** 
+opens directory or if it is an mp3 or m4a open the file for playback
 
 #### Settings View
 ![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview1")
 
 ![settingsview2](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
 
-- turn sleep timer on/off _[A]_
+- turn sleep timer on/off **[A]**
 if on, the player saves the current audiobook and position and shuts down the pi
 default is 30min, change it in 'player/constants.py'
-- go to play view _[B]_
-- turn wifi on/off _[X]_
+- go to play view **[B]**
+- turn wifi on/off **[X]**
 uses rfkill
-- shutdown _[Y]_
+- shutdown **[Y]**
 save audiobook and position and shut down the pi
+
 
 ## Installing FBCP-ILI9341 for Pirate Audio HAT
 Follow the installation instructions for [fbcp-ili9341](https://github.com/juj/fbcp-ili9341/blob/master/README.md#installation)
@@ -91,6 +97,7 @@ as is described [here](https://github.com/pimoroni/pirate-audio)
 
 To autostart fbcp-ili9341 add `sudo /home/pi/fbcp-ili9341/build/fbcp-ili9341 &` to your `/etc/rc.local` file
 
+
 ## How to autostart an app with Openbox
 
 - Configure Openbox to start program at boot:
@@ -114,6 +121,7 @@ in my case that is:
 - run `sudo update-alternatives --config x-session-manager` and choose Openbox.
 
 - I use raspi-config to start GUI at boot with autologin.
+
 
 ## Configure Openbox
 In '~/.config/openbox/rc.xml' I added:
