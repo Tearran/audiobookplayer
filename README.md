@@ -24,6 +24,7 @@ You will need:
 - run `python3 player/main.py`
 - GPIO Pin for the Y button changed at some point from 20 to 24
 you can change it in `player/constants.py`
+- shutdown.sh, turnwifion.sh and turnwifioff.sh need to be owned by root and need to be executable
 
 #### Play View
 ![playview](/photos/playview.png "playview")
