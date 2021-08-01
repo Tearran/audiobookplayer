@@ -2,6 +2,7 @@
     chapter forward/backward and back to start
     get to file view from here
 '''
+from tkinter import *
 from tkinter import ttk
 
 from view.timer import Timer
@@ -18,10 +19,15 @@ class NaviView(view.View):
 
         self.app = app
 
-        self.button_data = [{'r': 0, 'c': 0, 'icon': 'start.png'},     # but A
-                            {'r': 1, 'c': 0, 'icon': 'backward.png'},  # but B
-                            {'r': 0, 'c': 1, 'icon': 'files.png'},     # but X
-                            {'r': 1, 'c': 1, 'icon': 'forward.png'}]   # but Y
+        self.listindex = 0
+        self.listlength = 0
+
+        self.chapter = []
+
+        self.button_data = [{'r': 0, 'c': 0, 'icon': 'listup.png'},     # but A
+                            {'r': 1, 'c': 0, 'icon': 'listdown.png'},  # but B
+                            {'r': 0, 'c': 2, 'icon': 'small_files.png'},     # but X
+                            {'r': 1, 'c': 2, 'icon': 'ok.png'}]   # but Y
 
         self.d = {"<u>": self.A,
                   "<j>": self.B,
@@ -41,21 +47,56 @@ class NaviView(view.View):
             label = self.get_image(d['icon'])
             label.grid(column=d['c'], row=d['r'])
 
+        self.show_list()
+
     def timeup(self):
         '''if countdown runs out'''
         self.v.destroy()
         self.app.show_view("play")
 
+    def show_list(self):
+        self.chapter = []
+        self.listlength = self.app.audio.mediaplayer.get_chapter_count()
+        print("listlength: ",self.listlength)
+        for i in range(self.listlength):
+            self.chapter.append("chapter "+str(i))
+        print(self.chapter)
+        choosechapter = StringVar(value=self.chapter)
+        self.liste = Listbox(self.v,
+                             width=25,
+                             height=13,
+                             listvariable=choosechapter)
+        self.listindex = self.app.audio.mediaplayer.get_chapter()
+        self.liste.selection_set(self.listindex)
+        self.liste.activate(self.listindex)
+        self.liste.grid(column=1, row=0, rowspan=3)
+        self.liste.see(self.listindex)
+        self.liste.focus()
+
     def A(self):
-        '''set position of audiobook back to beginning'''
+        '''go up in chapter list'''
         self.timer.reset()
-        self.app.audio.mediaplayer.set_position(0)
-        self.app.audio.position = 0
+        self.liste.selection_clear(self.listindex)
+        if self.listindex > 0:
+            self.listindex -= 1
+        else:
+            self.listindex = self.listlength - 1
+        self.liste.selection_set(self.listindex)
+        self.liste.see(self.listindex)
+        self.liste.activate(self.listindex)
 
     def B(self):
-        '''go to previous chapter of audiobook'''
+        '''go down in chapter list'''
         self.timer.reset()
-        self.app.audio.mediaplayer.previous_chapter()
+        self.liste.selection_clear(self.listindex)
+        if self.listindex < self.listlength-1:
+            self.listindex += 1
+        else:
+            self.listindex = 0
+        self.liste.selection_set(self.listindex)
+        self.liste.see(self.listindex)
+        self.liste.activate(self.listindex)
+        
 
     def X(self):
         '''go to file view'''
@@ -66,4 +107,9 @@ class NaviView(view.View):
     def Y(self):
         '''go to next chapter of audiobook'''
         self.timer.reset()
-        self.app.audio.mediaplayer.next_chapter()
+        if self.liste.curselection() != "":
+            cur = self.liste.curselection()[0]
+        else:
+            cur = 0
+        print(cur,type(cur))
+        self.app.audio.mediaplayer.set_chapter(cur)
