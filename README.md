@@ -136,3 +136,8 @@ In '~/.config/openbox/rc.xml' I added:
 ```
 
 This removes all decorations, especially the top menu.
+
+### Problems with PIL
+When I get
+`ImportError: cannot import name 'ImageTk' from 'PIL'`
+at startup, I delete the PIL and Pillow packages in the dist-packages folder and install Pillow with `pip install Pillow`.
