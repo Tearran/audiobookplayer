@@ -29,39 +29,16 @@ you can change it in `player/constants.py`
 #### Play View
 ![playview](/photos/playview.png "playview")
 
-- change volume **[A,B]**
-- play/pause **[Y]**
-- go to navi view **[X]**
-
 #### Navi View
 ![naviview](/photos/naviview.png "naviview")
-
-- restart audio book **[A]**
-- chapter forward/backward **[B,Y]**
-- go to file view **[X]**
 
 #### File View
 ![fileview](/photos/fileview.png "fileview")
 
-- left buttons navigate the directory structure **[A,B]**
-- go to settings view **[X]**
-- ok **[Y]** 
-opens directory or if it is an mp3 or m4a open the file for playback
-
 #### Settings View
-![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff_.png "settingsview1")
+![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview1")
 
 ![settingsview2](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
-
-- turn sleep timer on/off **[A]**
-if on, the player saves the current audiobook and position and shuts down the pi
-default is 30min, change it in 'player/constants.py'
-- go to play view **[B]**
-- turn wifi on/off **[X]**
-uses rfkill
-- shutdown **[Y]**
-save audiobook and position and shut down the pi
-
 
 ## Installing FBCP-ILI9341 for Pirate Audio HAT
 Follow the installation instructions for [fbcp-ili9341](https://github.com/juj/fbcp-ili9341/blob/master/README.md#installation)
