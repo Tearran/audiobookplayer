@@ -16,4 +16,4 @@ SLEEP_TIME = 1800
 
 # where are the audiobooks
 DEFAULT_AUDIO_PATH = "/home/pi/"
-LASTBOOK_PATH = "/home/pi/"
+LASTBOOK_PATH = "/home/pi/lastbook.txt"
