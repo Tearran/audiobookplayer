@@ -49,9 +49,9 @@ you can change it in `player/constants.py`
 opens directory or if it is an mp3 or m4a open the file for playback
 
 #### Settings View
-![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview1")
+![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff_.png "settingsview1")
 
-![settingsview2](/photos/settingsview_turnsleepon_turnwifion_.png "settingsview2")
+![settingsview2](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
 
 - turn sleep timer on/off **[A]**
 if on, the player saves the current audiobook and position and shuts down the pi
