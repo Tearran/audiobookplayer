@@ -36,9 +36,10 @@ you can change it in `player/constants.py`
 ![fileview](/photos/fileview.png "fileview")
 
 #### Settings View
-![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview1")
 
-![settingsview2](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
+![settingsview1](/photos/settingsview_turnsleepon_turnwifion.png "settingsview1")
+
+![settingsview2](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview2")
 
 ## Installing FBCP-ILI9341 for Pirate Audio HAT
 Follow the installation instructions for [fbcp-ili9341](https://github.com/juj/fbcp-ili9341/blob/master/README.md#installation)

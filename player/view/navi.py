@@ -24,10 +24,10 @@ class NaviView(view.View):
 
         self.chapter = []
 
-        self.button_data = [{'r': 0, 'c': 0, 'icon': 'listup.png'},     # but A
-                            {'r': 1, 'c': 0, 'icon': 'listdown.png'},  # but B
+        self.button_data = [{'r': 0, 'c': 0, 'icon': 'chapter_up.png'},     # but A
+                            {'r': 1, 'c': 0, 'icon': 'chapter_down.png'},  # but B
                             {'r': 0, 'c': 2, 'icon': 'small_files.png'},     # but X
-                            {'r': 1, 'c': 2, 'icon': 'ok.png'}]   # but Y
+                            {'r': 1, 'c': 2, 'icon': 'chapter_ok.png'}]   # but Y
 
         self.d = {"<u>": self.A,
                   "<j>": self.B,
