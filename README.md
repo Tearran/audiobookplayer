@@ -27,7 +27,7 @@ you can change it in `player/constants.py`
 - shutdown.sh, turnwifion.sh and turnwifioff.sh need to be owned by root and need to be executable
 
 #### Play View
-![Screenshot of play view. Icons louder and quieter on the left. "Go to chapter view" and playpause buttons on the right.](/photos/playview.png "playview")
+![Screenshot of play view. Icons louder and quieter on the left. "Go to chapter view" and playpause buttons on the right.](/photos/playview_border.png "playview")
 
 - **[A,B]** change volume
 - **[X]** go to chapter view
@@ -41,16 +41,16 @@ you can change it in `player/constants.py`
 - **[X]** go to file view
 
 #### File View
-![Screenshot of file view. List of files in current directory in the middle. On the left scroll up and down icons. "Go to settings view" and ok icon the right.](/photos/fileview.png "fileview")
+![Screenshot of file view. List of files in current directory in the middle. On the left scroll up and down icons. "Go to settings view" and ok icon the right.](/photos/fileview_border.png "fileview")
 
 - **[A,B]** left buttons navigate the directory structure
 - **[X]** go to settings view
 - **[Y]** ok: opens directory or if it is an mp3 or m4a open the file for playback
 
 #### Settings View
-![Screenshot of settings view 1. On the left is turn sleep timer off and turn wifi off. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview1")
+![Screenshot of settings view 1. On the left is turn sleep timer off and turn wifi off. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepoff_turnwifioff_border.png "settingsview1")
 
-![Screenshot of settings view 2. On the left is turn sleep timer on and turn wifi on. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
+![Screenshot of settings view 2. On the left is turn sleep timer on and turn wifi on. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepon_turnwifion_border.png "settingsview2")
 
 - **[A]** turn sleep timer on/off
 if on, the player saves the current audiobook and position and shuts down the pi
