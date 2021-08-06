@@ -15,7 +15,7 @@ The app is a work in progress and customized for our personal needs. When I star
 - Pirate Audio Hat ( tested with Amp and Speaker)
 
 ## Python App Overview
-The Tkinter App is quite simple. You can navigate with the four buttons of the Pirate Audio HAT. It needs python-vlc installed. For test purposes I configured the keys 'U'->A, 'J'->B, 'I'->X and 'K'->Y to use on a keyboard instead.
+The Tkinter App is quite simple. You can navigate with the four buttons of the Pirate Audio HAT. It needs python-vlc installed. 
 
 ### Want to test it?
 You will need:
