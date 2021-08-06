@@ -36,9 +36,9 @@ you can change it in `player/constants.py`
 #### Chapter View
 ![Screenshot of navi view. Chapter list is in the middle, scroll up or down icons on the left. "Go to file view" and ok icon on the right.](/photos/navi_border.png "chapterview")
 
-- **[A]** restart audio book
-- **[B,Y]** chapter forward/backward
+- **[A,B]** move up and down in chapter list
 - **[X]** go to file view
+- **[Y]** play selected chapter
 
 #### File View
 ![Screenshot of file view. List of files in current directory in the middle. On the left scroll up and down icons. "Go to settings view" and ok icon the right.](/photos/fileview_border.png "fileview")
