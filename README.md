@@ -124,7 +124,7 @@ in my case that is:
 
 
 ### Configure Openbox
-In '~/.config/openbox/rc.xml' I added:
+In `~/.config/openbox/rc.xml` I added:
 
 ```xml
 <applications>
