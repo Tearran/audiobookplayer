@@ -2,7 +2,7 @@
  
 This project uses a Pimoroni Pirate Audio HAT on a Raspberry Pi Zero to play audiobooks. It is written in Python with Tkinter. I run it in Openbox at startup. [Fbcp-ili9341](https://github.com/juj/fbcp-ili9341) shows HDMI output on the display. 
 
-![player](/photos/player.png "player")
+![photo of Pirate Audio HAT on a Raspberry Pi Zero. The app is running with play view visible.](/photos/player.png "player")
 
 ### Info
 
@@ -27,39 +27,38 @@ you can change it in `player/constants.py`
 - shutdown.sh, turnwifion.sh and turnwifioff.sh need to be owned by root and need to be executable
 
 #### Play View
-![playview](/photos/playview.png "playview")
+![Screenshot of play view. Icons louder and quieter on the left. "Go to chapter view" and playpause buttons on the right.](/photos/playview.png "playview")
 
-- change volume **[A,B]**
-- play/pause **[Y]**
-- go to navi view **[X]**
+- **[A,B]** change volume
+- **[X]** go to chapter view
+- **[Y]** play/pause
 
-#### Navi View
-![naviview](/photos/naviview.png "naviview")
+#### Chapter View
+![Screenshot of navi view. Chapter list is in the middle, scroll up or down icons on the left. "Go to file view" and ok icon on the right.](/photos/chapterview.png "chapterview")
 
-- restart audio book **[A]**
-- chapter forward/backward **[B,Y]**
-- go to file view **[X]**
+- **[A]** restart audio book
+- **[B,Y]** chapter forward/backward
+- **[X]** go to file view
 
 #### File View
-![fileview](/photos/fileview.png "fileview")
+![Screenshot of file view. List of files in current directory in the middle. On the left scroll up and down icons. "Go to settings view" and ok icon the right.](/photos/fileview.png "fileview")
 
-- left buttons navigate the directory structure **[A,B]**
-- go to settings view **[X]**
-- ok **[Y]** 
-opens directory or if it is an mp3 or m4a open the file for playback
+- **[A,B]** left buttons navigate the directory structure
+- **[X]** go to settings view
+- **[Y]** ok: opens directory or if it is an mp3 or m4a open the file for playback
 
 #### Settings View
-![settingsview1](/photos/settingsview_turnsleepoff_turnwifioff_.png "settingsview1")
+![Screenshot of settings view 1. On the left is turn sleep timer off and turn wifi off. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepoff_turnwifioff_.png "settingsview1")
 
-![settingsview2](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
+![Screenshot of settings view 2. On the left is turn sleep timer on and turn wifi on. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
 
-- turn sleep timer on/off **[A]**
+- **[A]** turn sleep timer on/off
 if on, the player saves the current audiobook and position and shuts down the pi
 default is 30min, change it in 'player/constants.py'
-- go to play view **[B]**
-- turn wifi on/off **[X]**
+- **[B]** go to play view
+- **[X]** turn wifi on/off
 uses rfkill
-- shutdown **[Y]**
+- **[Y]** shutdown
 save audiobook and position and shut down the pi
 
 
@@ -137,7 +136,7 @@ In '~/.config/openbox/rc.xml' I added:
 
 This removes all decorations, especially the top menu.
 
-### Problems with PIL
+## Problems with PIL
 When I get
 `ImportError: cannot import name 'ImageTk' from 'PIL'`
 at startup, I delete the PIL and Pillow packages in the dist-packages folder and install Pillow with `pip install Pillow`.
