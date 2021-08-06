@@ -16,7 +16,7 @@ import RPi.GPIO as GPIO
 from view.file import FileView
 from view.play import PlayView
 from view.settings import SettingsView
-from view.navi import NaviView
+from view.chapter import ChapterView
 from view.timer import Timer
 from music import Music
 import constants as c
@@ -61,14 +61,14 @@ class Audioplayer():
         self.countdown()
 
         playview = PlayView(self)
+        chapterview = ChapterView(self)
         fileview = FileView(self)
         settingsview = SettingsView(self)
-        naviview = NaviView(self)
 
         self.view_dict = {"play": playview,
+                          "chapter": chapterview,
                           "file": fileview,
-                          "settings": settingsview,
-                          "navi": naviview}
+                          "settings": settingsview}
 
         # check if an audiobook is saved from last app run
         # else default audiobook path is used
@@ -125,7 +125,7 @@ class Audioplayer():
         # release GPIO pins
         GPIO.cleanup()
         # shut down the pi
-        subprocess.run("/home/pi/player/shutdown.sh")
+        #subprocess.run("/home/pi/player/shutdown.sh")
         # destroy the app
         self.root.destroy()
 

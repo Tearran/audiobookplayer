@@ -9,7 +9,7 @@ from view.timer import Timer
 import view.parentview as view
 
 
-class NaviView(view.View):
+class ChapterView(view.View):
     ''' navigate through audiobook
         forward, backward, back to start
         get to file view
@@ -26,17 +26,11 @@ class NaviView(view.View):
 
         self.button_data = [{'r': 0, 'c': 0, 'icon': 'chapter_up.png'},     # but A
                             {'r': 1, 'c': 0, 'icon': 'chapter_down.png'},  # but B
-                            {'r': 0, 'c': 2, 'icon': 'small_files.png'},     # but X
+                            {'r': 0, 'c': 2, 'icon': 'chapter_files.png'},     # but X
                             {'r': 1, 'c': 2, 'icon': 'chapter_ok.png'}]   # but Y
-
-        self.d = {"<u>": self.A,
-                  "<j>": self.B,
-                  "<i>": self.X,
-                  "<k>": self.Y}
 
     def view(self):
         '''look of the view'''
-        self.set_keys(self.app.root, self.d)
         self.app.set_view(self)
         self.countdown()
 

@@ -26,17 +26,11 @@ class SettingsView(view.View):
 
         self.wifion = bool
 
-        self.button_data = [{'r': 1, 'c': 0, 'icon': 'play_settings.png'},
+        self.button_data = [{'r': 0, 'c': 1, 'icon': 'play_settings.png'},
                             {'r': 1, 'c': 1, 'icon': 'shutdown.png'}]
-
-        self.d = {"<u>": self.A,
-                  "<j>": self.B,
-                  "<i>": self.X,
-                  "<k>": self.Y}
 
     def view(self):
         '''look of the view'''
-        self.set_keys(self.app.root, self.d)
         self.app.set_view(self)
 
         self.sleep_on = self.app.sleep.get_sleep_on()
@@ -64,7 +58,7 @@ class SettingsView(view.View):
         else:
             labeltext = "turnwifion.png"
         l_wifi = self.get_image(labeltext)
-        l_wifi.grid(row=0, column=1)
+        l_wifi.grid(row=1, column=0)
 
     def timeup(self):
         '''if timer runs out'''
@@ -109,12 +103,6 @@ class SettingsView(view.View):
             self.start_sleep()
 
     def B(self):
-        '''go to play window'''
-        self.timer.stop()
-        self.v.destroy()
-        self.app.show_view("play")
-
-    def X(self):
         '''toggle wifi'''
         self.timer.reset()
         if self.wifion:
@@ -124,6 +112,12 @@ class SettingsView(view.View):
         time.sleep(2)
         self.v.destroy()
         self.show()
+
+    def X(self):
+        '''go to play window'''
+        self.timer.stop()
+        self.v.destroy()
+        self.app.show_view("play")
 
     def Y(self):
         '''

@@ -25,17 +25,11 @@ class PlayView(view.View):
 
         self.button_data = [{'r': 0, 'c': 0, 'icon': 'louder.png'},  # but A
                             {'r': 1, 'c': 0, 'icon': 'quieter.png'},  # but B
-                            {'r': 0, 'c': 1, 'icon': 'navi.png'},  # but X
+                            {'r': 0, 'c': 1, 'icon': 'chapter.png'},  # but X
                             {'r': 1, 'c': 1, 'icon': 'playpause.png'}]  # but Y
-
-        self.d = {"<u>": self.A,
-                  "<j>": self.B,
-                  "<i>": self.X,
-                  "<k>": self.Y}
 
     def view(self):
         '''look of the view'''
-        self.set_keys(self.app.root, self.d)
         self.app.set_view(self)
 
         self.v = ttk.Frame(self.app.root, width=240, height=240)
@@ -56,7 +50,7 @@ class PlayView(view.View):
     def X(self):
         '''go to navi view'''
         self.v.destroy()
-        self.app.show_view("navi")
+        self.app.show_view("chapter")
 
     def Y(self):
         '''play/pause audiobook'''
