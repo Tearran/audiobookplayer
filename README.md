@@ -48,7 +48,7 @@ you can change it in `player/constants.py`
 - **[Y]** ok: opens directory or if it is an mp3 or m4a open the file for playback
 
 #### Settings View
-![Screenshot of settings view 1. On the left is turn sleep timer off and turn wifi off. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepoff_turnwifioff_.png "settingsview1")
+![Screenshot of settings view 1. On the left is turn sleep timer off and turn wifi off. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepoff_turnwifioff.png "settingsview1")
 
 ![Screenshot of settings view 2. On the left is turn sleep timer on and turn wifi on. On the right is icon "go to play view" and shutdown](/photos/settingsview_turnsleepon_turnwifion.png "settingsview2")
 
